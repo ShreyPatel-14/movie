@@ -1,0 +1,12 @@
+.movies
+{
+    padding-top: 80px;
+}
+.row_item
+{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    column-gap: 20px;
+    row-gap:30px;
+    overflow-x: hidden;
+}

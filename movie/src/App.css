@@ -1,0 +1,54 @@
+
+
+.cast
+{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+    column-gap: 20px;
+    row-gap:30px;
+    overflow-x: hidden;
+    margin:10px;
+}
+.svg img
+{
+    border-radius: 50%;
+}
+.Sname{
+    font-size: 23px;
+    font-weight: 500;    
+}
+
+.Sdetail{
+    font-size: 20px;
+    color:rgba(185, 181, 181, 0.6);
+}
+
+.svg{
+    align-items: center;
+    display: flex;
+}
+
+.Amargin{
+    margin-left: 13px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.heads
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px 15px 15px 15px;
+}
+.staricon
+{
+    font-size:25px;
+}
+.rating
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

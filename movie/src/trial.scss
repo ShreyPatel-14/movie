@@ -1,0 +1,263 @@
+.link {
+  display: block;
+  text-align: center;
+  color: #777;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.movie_card {
+  position: relative;
+  display: block;
+  width: 1300px;
+  padding: 0 10px;
+  height: 550px;
+  margin: 80px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  .info_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    .movie_header {
+      position: relative;
+      padding: 25px;
+      height: 55%;
+      h1 {
+        color: black;
+        font-weight: 400;
+        padding-bottom: 10px;
+      }
+      h4 {
+        color: #2e2e2e;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+      }
+      .minutes {
+        display: inline-block;
+        margin-top: 17px;
+        color: #2e2e2e;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba(8, 8, 8, 0.55);
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        .i {
+          margin-right: 5px;
+          font-size: 24px;
+        }
+        span {
+          padding-right: 2px;
+        }
+      }
+      .type {
+        display: inline-block;
+        color: #2e2e2e;
+      }
+      .locandina {
+        position: relative;
+        float: left;
+        margin-right: 20px;
+        height: 100%;
+        box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .movie_desc {
+      padding: 25px;
+      height: 33%;
+      .text {
+        color: #2e2e2e;
+        font-size: 17px;
+      }
+    }
+    .movie_social {
+      height: 12%;
+      padding-left: 25px;
+      padding-bottom: 25px;
+      button {
+        padding: 6px 5%;
+        border: 0;
+        outline: 0;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .i {
+          margin-right: 5px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .blur_back {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    right: 0;
+    background-size: cover;
+    border-radius: 11px;
+  }
+}
+@media (max-width: 1286px) {
+  .movie_card {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .blur_back {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .movie_header {
+    width: 100%;
+  }
+
+  .movie_desc {
+    width: 50%;
+  }
+
+  .info_section {
+    background: linear-gradient(to right, #979999 40%, transparent 100%);
+  }
+
+  .blur_back {
+    width: 80%;
+    background-position: -100% 10% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie_card {
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+  }
+  .movie_header {
+    height: 50%;
+    margin: 0;
+  }
+  .locandina {
+    width: 33%;
+    height: 250px !important;
+  }
+  .blur_back {
+    width: 96%;
+    background-position: 50% 50% !important;
+    margin: 0px;
+  }
+
+  .movie_desc {
+    width: 100%;
+  }
+
+  .info_section {
+    background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
+    display: inline-grid;
+  }
+}
+@media (max-width: 575px) {
+  .locandina {
+    width: 40%;
+  }
+  .blur_back {
+    width: 95%;
+  }
+}
+@media (max-width: 455px) {
+  .movie_header,.movie_desc,.movie_social
+  {
+    padding:20px !important;
+  }
+  .locandina {
+    width: 48% !important;
+  }
+  .moviename {
+    font-size: 21px;
+  }
+  .releaseyear {
+    font-size: 19px;
+  }
+  .minutes {
+    .i {
+      padding-right: 0px;
+      font-size: 19px !important;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  h5 {
+    font-size: 14px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .blur_back {
+    width: 94%;
+  }
+  .movie_desc {
+    .text {
+      font-size: 15px !important;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .locandina {
+    width: 48% !important;
+    height: 220px !important;
+  }
+  .moviename {
+    font-size: 19px;
+  }
+  .releaseyear {
+    font-size: 16px;
+  }
+  .minutes {
+    .i {
+      padding-right: 0px;
+      font-size: 18px !important;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  h5 {
+    font-size: 12px;
+  }
+}
+.nav-pills {
+  padding: 0 20px;
+  margin: 30px 0;
+}
+.nav-pills .nav-link {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-pills .nav-link:hover {
+  background: #0a2b4c;
+}
+.nav-pills .nav-link.active {
+  background-color: #061729;
+  border-bottom: 4px solid rgb(215, 213, 213);
+
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.nav-pills .nav-link .inside {
+  color: rgb(215, 213, 213);
+  font-size: 20px;
+}
+.back_hov:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}

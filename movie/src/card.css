@@ -1,0 +1,151 @@
+
+  .container_card {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: relative;
+    transition: .3s;
+    padding:0 10px;
+  }
+  
+  .container_card:hover {
+    z-index: 1;
+  }
+  
+  .container_card .cardimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  /* .container_card:hover .cardimg {
+    width: 255px;
+  } */
+  
+  .container_card .dets {
+    width: 92.5%;
+    height: 100%;
+    background: linear-gradient(to bottom, #0e0c0b41, #121111 75%);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: .5s;
+  }
+  
+  .container_card:hover .dets {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .dets h4 {
+    padding: 2px 0px;
+  }
+  
+  .dets h5 {
+    word-spacing: 1px;
+    margin-bottom: 2px;
+    padding:5px 0;
+    display:flex;
+    width:fit-content;
+    align-content: center;
+  }
+  .dets .i
+  {
+    font-size:24px;
+    margin-right:5px;
+  }
+  .dets p {
+    font-size: 11px;
+    margin-bottom: 2px;
+    opacity: .8;
+  }
+  
+  .dets button {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 12px;
+    padding: 5px 10px;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: left;
+    border-radius: 5px;
+    font-weight: 500;
+    opacity: .8;
+    transition: .2s;
+    display:flex;
+    justify-content: center;
+  }
+  
+  .dets button a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+
+  .dets button i
+  {
+    font-size:19px;
+    padding-right:5px;
+  }
+  .container_card:hover .dets {
+    opacity: 1;
+  }
+  
+  .container_card:hover .dets button {
+    background-color: rgb(255, 255, 255, 0.1);
+  }
+  .buttons{
+    margin: 20px 200px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor:pointer
+  }
+  .watch-button
+  {
+    display:flex;
+    align-items: center;
+  }
+  .watch-icons
+  {
+    font-size:15px;
+    padding-right:5px;
+  }
+  .heading
+  {
+    margin-left:10px;
+    margin-right:10px;
+  }
+  .heading2
+  {
+    margin:15px 10px 15px 10px;
+  }
+  .heading3
+  {
+    margin:15px 10px 0 10px;
+  }
+  .heading4
+  {
+    margin:0px 10px 20px 10px;
+  }
+  .heading5
+  {
+    margin:0px 10px 20px 0px;
+    padding-left:12px;
+  }
+  .homedata
+  {
+    background-color: #061729;
+    color:white;
+  }

@@ -1,0 +1,17 @@
+{
+  "name": "fsd-indi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "movie": "cd movie && npm start",
+    "backend": "cd backend && npm start",
+    "dev": "concurrently \"npm run movie\" \"npm run backend\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.1",
+    "dotenv": "^16.3.1"
+  }
+}
