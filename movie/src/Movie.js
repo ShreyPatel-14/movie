@@ -416,7 +416,7 @@ function Movie(props) {
           </div>
         )}
         <hr className="heading4" style={{marginTop:'20px'}}></hr>
-        <h2 className="heading4" style={{marginBottom:'20px'}}>More Like This</h2>
+        {rec && <h2 className="heading4" style={{marginBottom:'20px'}}>More Like This</h2>}
         
         <div className="container">
           <div className="row_item">
