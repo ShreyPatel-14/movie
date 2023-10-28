@@ -16,6 +16,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.options('/signin', cors(corsOptions));
+
 PORT = process.env.PORT || 5000;
 uri = process.env.MONGODB_URI;
 
