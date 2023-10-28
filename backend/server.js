@@ -5,9 +5,16 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 
 app.use(express.json());
-app.use(cors({
-  origin: 'https://vercel.com/shreys-projects/movie-frontend'
-}));
+// app.use(cors({
+//   origin: 'https://vercel.com/shreys-projects/movie-frontend'
+// }));
+const corsOptions = {
+  origin: 'https://movie-frontend-swart.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 
 PORT = process.env.PORT || 5000;
 uri = process.env.MONGODB_URI;
