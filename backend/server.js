@@ -58,6 +58,10 @@ const WatchList = new mongoose.Schema({
 const Watch = mongoose.model("watchlist", WatchList);
 Watch.createIndexes();
 
+app.get("/", (req, res) => {
+  res.send("Hello");
+});
+
 app.post("/signup", async (req, res) => {
   try {
     const { firstname, lastname, email, password } = req.body;
