@@ -42,7 +42,7 @@ function SignUp() {
       } else {
         setValemail("");
         setValpass("");
-        let result = await fetch("http://localhost:5000/signup", {
+        let result = await fetch("https://movie-backend-3omk.onrender.com/signup", {
           method: "post",
           body: JSON.stringify(obj),
           headers: {
