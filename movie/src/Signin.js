@@ -26,7 +26,7 @@ function Signin() {
     e.preventDefault();
     // console.log(obj);
     try {
-      let result = await fetch("http://localhost:5000/signin", {
+      let result = await fetch("https://movie-backend-3omk.onrender.com/signin", {
         method: "post",
         body: JSON.stringify(obj),
         headers: {
