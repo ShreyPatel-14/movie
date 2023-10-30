@@ -16,15 +16,15 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.options('/signin', cors(corsOptions));
+// app.options('/signin', cors(corsOptions));
 
 PORT = process.env.PORT || 5000;
-//uri = process.env.MONGODB_URI;
+uri = process.env.MONGODB_URI;
 
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 mongoose
-  .connect("mongodb+srv://Sparse2002:shrey14112002@cluster0.tq8pkzd.mongodb.net/Indi", { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Successfully connected to MongoDB");
   })
