@@ -33,8 +33,6 @@ function Signin() {
           "Content-Type": "application/json",
         },
       });
-      if(result.ok)
-      {
         result = await result.json();
         if (result.notemail) {
           setValemail(result.notemail);
@@ -49,11 +47,7 @@ function Signin() {
           localStorage.setItem("moviemail", result.getemail);
           navigate("/");
         }
-      }
-      else
-      {
-        console.log("Server error")
-      }
+     
     } catch (error) {
       console.error("Error logging in:", error);
     }
