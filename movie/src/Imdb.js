@@ -61,7 +61,7 @@ function Imdb(props) {
   const getInitialData = async () => {
     try {
       const usermail = localStorage.getItem("moviemail");
-      let result = await fetch("http://localhost:5000/initialdata", {
+      let result = await fetch("https://movie-backend-3omk.onrender.com/initialdata", {
         method: "post",
         body: JSON.stringify({ usermail }),
         headers: {
@@ -88,7 +88,7 @@ function Imdb(props) {
       console.log(id);
       console.log(media_type);
       const usermail = localStorage.getItem("moviemail");
-      let result = await fetch("http://localhost:5000/watchlist", {
+      let result = await fetch("https://movie-backend-3omk.onrender.com/watchlist", {
         method: "post",
         body: JSON.stringify({ media_type, id, usermail }),
         headers: {
