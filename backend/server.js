@@ -98,12 +98,15 @@ app.post("/signup", async (req, res) => {
 app.post("/signin", async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log(email,password)
     const user = await User.findOne({ email });
+    console.log('the user is',user)
     if (!user) {
       return res.status(401).json({ notemail: "Mail id not found" });
     }
 
     const pwd = await bcrypt.compare(password, user.password);
+    console.log('the pwd is',pwd)
     if (!pwd) {
       return res.status(401).json({ notpassword: "Invalid password" });
     } else {
