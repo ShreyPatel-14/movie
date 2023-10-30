@@ -21,12 +21,15 @@ app.options('/signin', cors(corsOptions));
 PORT = process.env.PORT || 5000;
 uri = process.env.MONGODB_URI;
 
+var connected=false;
+
 const mongoose = require("mongoose");
 mongoose.pluralize(null);
 mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log("Successfully connected to MongoDB");
+    connected=true;
   })
   .catch((err) => {
     console.error(err);
@@ -70,7 +73,7 @@ const Watch = mongoose.model("watchlist", WatchList);
 Watch.createIndexes();
 
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.send("database status: ",connected);
 });
 
 app.post("/signup", async (req, res) => {
