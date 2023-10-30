@@ -33,19 +33,26 @@ function Signin() {
           "Content-Type": "application/json",
         },
       });
-      result = await result.json();
-      if (result.notemail) {
-        setValemail(result.notemail);
-        setValpass("");
-      } else if (result.notpassword) {
-        setValpass(result.notpassword);
-        setValemail("");
-      } else if (result.message) {
-        setValemail("");
-        setValpass("");
-        localStorage.setItem("movieicons", true);
-        localStorage.setItem("moviemail", result.getemail);
-        navigate("/");
+      if(result.ok)
+      {
+        result = await result.json();
+        if (result.notemail) {
+          setValemail(result.notemail);
+          setValpass("");
+        } else if (result.notpassword) {
+          setValpass(result.notpassword);
+          setValemail("");
+        } else if (result.message) {
+          setValemail("");
+          setValpass("");
+          localStorage.setItem("movieicons", true);
+          localStorage.setItem("moviemail", result.getemail);
+          navigate("/");
+        }
+      }
+      else
+      {
+        console.log("Server error")
       }
     } catch (error) {
       console.error("Error logging in:", error);
