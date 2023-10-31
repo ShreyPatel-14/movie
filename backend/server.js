@@ -7,7 +7,7 @@ require("dotenv").config();
 app.use(express.json());
 
 const corsOptions = {
-  origin: 'https://movie-frontend-swart.vercel.app',
+  origin: 'https://cinemate-movie-app.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };
